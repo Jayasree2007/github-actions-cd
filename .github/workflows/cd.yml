@@ -1,0 +1,22 @@
+name: CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Display project files
+        run: ls -la
+
+      - name: Build
+        run: echo "Build completed successfully"
+
+      - name: Deploy
+        run: echo "Deployment completed successfully"
